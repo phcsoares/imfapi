@@ -39,6 +39,9 @@ lint: ## check style with ruff
 lint-fix: ## check style with ruff and fix errors
 	@uvx ruff check --fix .
 
+pre-commit: ## runs pre-commit
+	@ uv run pre-commit run --all-files
+
 test: ## run tests quickly with the default Python
 	@uv run pytest -vv --cov=src/imfapi --cov-report=term-missing
 
