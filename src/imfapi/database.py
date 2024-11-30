@@ -67,8 +67,7 @@ class IMFData:
 
     def _make_databases(self) -> list[DataBase]:
         databases = []
-        for db_resp in self._indicators_json:
-            db_json = db_resp.json()
+        for db_json in self._indicators_json:
             db_id = db_json["Structure"]["KeyFamilies"]["KeyFamily"]["@id"]
             name = self._df.loc[(self._df["KeyFamilyRef.KeyFamilyID"] == db_id), "Name.#text"].iloc[0]
             database = DataBase(name=name, database_id=db_id, structure=db_json)

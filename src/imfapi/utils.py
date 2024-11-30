@@ -33,9 +33,7 @@ def make_request(url: str) -> requests.Response:
 @cache
 @retry(wait=wait_fixed(0.5), retry=retry_if_exception_type(JSONDecodeError), stop=stop_after_attempt(MAX_RETRIES))
 def make_json_request(url: str) -> dict[str, Any]:
-    data = requests.get(url)
-    data.json()
-    return data
+    return requests.get(url).json()
 
 
 def chunk_iterable(iterable: SizedIndexableIterable[T], chunk_size: int = 1) -> Generator[Iterable[T], Any, Any]:
