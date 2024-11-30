@@ -1,0 +1,8 @@
+JSON_RESTFUL_ENDPOINT = "http://dataservices.imf.org/REST/SDMX_JSON.svc"
+DATAFLOW = "Dataflow"
+DATA_STRUCTURE = "DataStructure"
+COMPACT_DATA = "CompactData"
+METADATA_STRUCTURE = "MetadataStructure"
+GENERIC_METADATA = "GenericMetadata"
+CODE_LIST = "CodeList"
+MAX_SERIES_IN_RESULT = "MaxSeriesInResult"
